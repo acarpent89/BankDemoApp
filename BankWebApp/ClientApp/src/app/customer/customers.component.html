@@ -1,0 +1,11 @@
+<h1>Customers</h1>
+<ul>
+  <li *ngFor="let customer of customers">
+    <span class="badge">
+      <a [routerLink]="['/customer', customer.customerId]">{{customer.customerId}}</a>
+      </span> {{customer.name}} {{customer.address}} {{customer.email}}
+
+  </li>
+</ul>
+
+<a [routerLink]="['/customer', -1]">Create New Customers</a>

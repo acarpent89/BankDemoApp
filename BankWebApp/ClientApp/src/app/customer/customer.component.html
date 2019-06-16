@@ -1,0 +1,14 @@
+<h1>Customer</h1>
+Name: <input [(ngModel)]="customer.name">
+Address: <input [(ngModel)]="customer.address">
+Email: <input [(ngModel)]="customer.email">
+Comments: <input [(ngModel)]="customer.comments">
+
+<br />
+<div *ngIf="id > 0">
+<button (click)="updateCustomer()">Update Customer</button>
+</div>
+<div *ngIf="id < 0">
+  <button (click)="addCustomer()">Create Customer</button>
+</div>
+<button (click)="getCustomers()">Get Customers</button>
